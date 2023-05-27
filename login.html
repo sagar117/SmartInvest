@@ -8,74 +8,199 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.5.0/material.min.css">
     <!-- Add custom styles for light theme color -->
     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
       body {
-        background-color: #ffffff; /* Set initial background color to white */
-        transition: all 1s ease; /* Add transition effect when changing background color */
+        background-color: #ffffff; 
+        transition: all 1s ease; 
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       .mdl-textfield {
-        width: 100%;
+        width: auto;
+        margin: 0 8px;
+        text-align: center;
       }
       .mdl-button--raised {
         background-color: #e1bee7;
+        font-size: 18px;
+        padding: 10px;
+        margin: 20px;
       }
       .mdl-button--colored {
         background-color: #ba68c8;
       }
+      .mdl-button--colored:hover {
+        background-color: #9c27b0;
+      }
+      header {
+        background-color: #ba68c8;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      header nav ul li {
+        margin-left: 10px;
+      }
+      header nav ul li:first-of-type {
+        margin-left: 0;
+      }
+      header nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      footer {
+        background-color: #ba68c8;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+      footer ul li {
+        margin-left: 10px;
+      }
+      footer ul li:first-of-type {
+        margin-left: 0;
+      }
+      footer ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: calc(100% - 80px);
+      }
+      .mdl-card {
+        width: 300px;
+        height: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .mdl-card__title-text {
+        text-align: center;
+      }
+      .g-recaptcha {
+        margin: 10px auto;
+        width: 304px;
+      }
     </style>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
   </head>
   <body>
-    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
-      <main class="mdl-layout__content">
-        <div class="mdl-card mdl-shadow--6dp">
-          <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-            <h2 class="mdl-card__title-text">Login</h2>
-          </div>
-          <div class="mdl-card__supporting-text">
-            <form action="/calculate" method="post" onsubmit="login()">
-              <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="username" name="username">
-                <label class="mdl-textfield__label" for="username">Username</label>
-              </div>
-              <br>
-              <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="password" id="password" name="password">
-                <label class="mdl-textfield__label" for="password">Password</label>
-              </div>
-              <br>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="center">
+      <div class="mdl-card mdl-shadow--6dp">
+        <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+          <h2 class="mdl-card__title-text">Login</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <form action="/upload" method="post" onsubmit="return login()" class="mdl-grid">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="username" name="username">
+              <label class="mdl-textfield__label" for="username">Username</label>
+            </div>
+            <div class="mdl-cell--12-col"></div>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="password" id="password" name="password">
+              <label class="mdl-textfield__label" for="password">Password</label>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LckCcEbAAAAAJGwiKAMvbmL6vchT1RiJRo6U4sr"></div>
+            <div class="mdl-cell--12-col center">
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">
                 Login
               </button>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
-      </main>
+      </div>
     </div>
+    <footer>
+      <ul>
+        <li><a href="#">Terms and Conditions</a></li>
+      </ul>
+    </footer>
     <!-- Import Material Design Components JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.5.0/material.min.js"></script>
     <script>
+      
+      grecaptcha.ready(function() {
+        var captcha = document.querySelector('.g-recaptcha');
+        if(captcha){
+          grecaptcha.render(captcha, {
+            'sitekey': '6LckCcEbAAAAAJGwiKAMvbmL6vchT1RiJRo6U4sr'
+          });
+        }
+      });
+      
       function login(){
+        event.preventDefault();
+        var captchaResponse = grecaptcha.getResponse();
         $.ajax({
           type: "POST",
           url: "/login",
-          data: $('form').serialize(),
+          data: $('form').serialize() + '&g-recaptcha-response=' + captchaResponse,
           success: function(data) {
             console.log("Login successful, redirecting to dashboard");
-            window.location.href = "/calculate";
+            window.location.href = "/upload";
           },
           error: function() {
             console.log("Error during login");
           }
         });
-        return false; // prevent form from submitting normally
       }
       
-      // Change background color randomly every 5 seconds
-      setInterval(function() {
-        var randomColor = Math.floor(Math.random()*16777215).toString(16); // Generate random color code in hexadecimal format
-        document.body.style.backgroundColor = "#" + randomColor; // Set background color to the random color code
-      }, 5000);
+      var toggle = false;
+      function changeColor(){
+        if(!toggle){
+          document.body.style.backgroundColor = "#00ff00"; // Change background color to green
+          document.body.innerHTML += "<div style='text-align: center;'>piya</div>"; // Add text to the body
+          toggle = true;
+        }else{
+          document.body.style.backgroundColor = "#ffffff"; // Change background color back to white
+          document.body.innerHTML = document.body.innerHTML.replace("<div style='text-align: center;'>piya</div>",""); // Remove text from the body
+          toggle = false;
+        }
+      }
+      
+      // Change background color and add text to the body on button click
+      document.getElementById("toggle-btn").addEventListener("click", function(){
+        changeColor();
+      });
     </script>
+    <button id="toggle-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+      Update
+    </button>
   </body>
 </html>

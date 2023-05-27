@@ -10,27 +10,49 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let userInput; // Declare a global variable
+let feature; // Declare a global variable
+let file_name;
+let file_name2;
 
-rl.question('Describe your feature: ', (answer) => {
-    userInput = answer; // Assign the input value to the global variable
+function askQuestion(question) {
+    return new Promise((resolve, reject) => {
+        rl.question(question, (answer) => {
+            resolve(answer);
+        });
+    });
+}
 
-    console.log(`Test, ${userInput}!`);
+async function collectInputs() {
+    const feature = await askQuestion('Describe your feature');
+    const file_name = await askQuestion('File Name');
+    const file_name2 = await askQuestion('File Name2');
+    // const city = await askQuestion('Which city do you live in? ');
+
+    // Process the collected inputs
+    console.log(`Feature: ${feature}`);
+    console.log(`Input file: ${file_name}`);
+    console.log(`Output file: ${file_name2}`);
+    // console.log(`City: ${city}`);
 
     rl.close();
 
-    if (userInput) {
+
+
+
+
+    if (feature && file_name && file_name2) {
         console.log("Feature is building")
 
 
 // Example usage of the global variable outside the readline interface
         setTimeout(() => {
-            console.log(`User input (global variable): ${userInput}`);
+            console.log(`User input (global variable): ${feature}`);
         }, 2000);
 
         const readFileAsync = util.promisify(fs.readFile);
         const writeFileAsync = util.promisify(fs.writeFile);
-        const filePath = '/Users/sagar/WebstormProjects/GPTdev/login.html';
+        const filePath = '/Users/sagar/WebstormProjects/GPTdev/'+file_name;
+        const filePath2 = '/Users/sagar/WebstormProjects/GPTdev/'+file_name2;
 
         const configuration = new Configuration({
             apiKey: "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",
@@ -40,7 +62,7 @@ rl.question('Describe your feature: ', (answer) => {
         async function fetchChatCompletion(fileContent) {
             const data = JSON.stringify({
                 model: "gpt-3.5-turbo",
-                messages: [{role: "user", content: userInput + "update and rewrite code! \n" + fileContent}],
+                messages: [{role: "user", content: feature + "update and rewrite code! \n" + fileContent}],
             });
 
             const options = {
@@ -96,9 +118,9 @@ rl.question('Describe your feature: ', (answer) => {
         async function updateFileWithCode(fileContent) {
             try {
                 const response = await fetchChatCompletion(fileContent);
-                const codeResponse = response.content.replace(userInput + "update and rewrite code! \n", ''); // Extract coding part of the response
+                const codeResponse = response.content.replace(feature + "update and rewrite code! \n", ''); // Extract coding part of the response
 
-                await writeFileAsync(filePath, codeResponse, 'utf8');
+                await writeFileAsync(filePath2, codeResponse, 'utf8');
                 console.log('File updated successfully.');
                 console.log(response)
             } catch (error) {
@@ -114,4 +136,6 @@ rl.question('Describe your feature: ', (answer) => {
                 console.error('Error:', error);
             });
     }
-});
+}
+
+collectInputs();
