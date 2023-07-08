@@ -1,0 +1,80 @@
+
+<form>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+  <label for="confirm-password">Confirm Password:</label><br>
+  <input type="password" id="confirm-password" name="confirm-password" required><br>
+  <input type="submit" value="Submit">
+</form>
+
+JavaScript Code:
+
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const confirmPasswordInput = document.querySelector('#confirm-password');
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+  if (name === '' || email === '' || password === '' || confirmPassword === '') {
+    alert('All fields are required.');
+  } else if (password !== confirmPassword) {
+    alert('Passwords do not match.');
+  } else if (password.length < 8) {
+    alert('Password must be at least 8 characters long.');
+  } else {
+    registerUser(name, email, password);
+    form.reset();
+    alert('User registration successful.');
+  }
+});
+
+function registerUser(name, email, password) {
+  const user = {
+    name: name,
+    email: email,
+    password: password
+  }
+  const userJson = JSON.stringify(user);
+  window.localStorage.setItem(email, userJson);
+}
+
+Python/Django Code:
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib import auth
+
+def register(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm-password']
+        
+        if name == '' or email == '' or password == '' or confirm_password == '':
+            return render(request, 'register.html', {'error': 'All fields are required.'})
+        elif password != confirm_password:
+            return render(request, 'register.html', {'error': 'Passwords do not match.'})
+        elif len(password) < 8:
+            return render(request, 'register.html', {'error': 'Password must be at least 8 characters long.'})
+        else:
+            try:
+                user = User.objects.get(username=email)
+                return render(request, 'register.html', {'error': 'Email already registered.'})
+            except User.DoesNotExist:
+                user = User.objects.create_user(username=email, password=password, first_name=name)
+                auth.login(request, user)
+                return redirect('dashboard')
+        
+    else:
+        return render(request, 'register.html')

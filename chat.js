@@ -1,29 +1,30 @@
-const { Configuration, OpenAIApi } = require("openai");
-const axios = require("axios");
+const fs = require('fs');
 
-const configuration = new Configuration({
-    apiKey: "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",
-});
-const openai = new OpenAIApi(configuration);
-
-axios
-    .post(
-        "https://api.openai.com/v1/chat/completions",
-        {
-            model: "gpt-3.5-turbo",
-            messages: [{ role: "user", content: "Hello world" }],
-        },
-        {
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${configuration.apiKey}`,
-            },
-        }
-    )
-    .then((response) => {
-        const responseData = response.data;
-        console.log(responseData.choices[0].message);
-    })
-    .catch((error) => {
-        console.error("Error:", error);
+function writeToSpecificPartOfFile(filePath, position, content, callback) {
+    const writeStream = fs.createWriteStream(filePath, { flags: 'r+' });
+    writeStream.on('error', callback);
+    writeStream.on('open', () => {
+        writeStream.write(content, 'utf8', (error) => {
+            if (error) {
+                writeStream.end();
+                return callback(error);
+            }
+            writeStream.end(() => {
+                callback(null); // Success
+            });
+        });
     });
+}
+
+// Usage example
+const filePath = 'path/to/file.txt';
+const position = 42; // Specify the position in the file where you want to write
+const content = 'Hello, world!'; // The content you want to write
+
+writeToSpecificPartOfFile(filePath, position, content, (error) => {
+    if (error) {
+        console.error('Error writing to file:', error);
+    } else {
+        console.log('Successfully wrote to file.');
+    }
+});

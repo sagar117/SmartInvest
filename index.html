@@ -1,0 +1,177 @@
+<!-- Updated and rewritten code for building an ecommerce website with dark material design library elements -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecommerce Website</title>
+  <!-- Importing the dark material design library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css" integrity="sha512-PNvVnytt+v56OGCakJyIQl7UiXjQTK0IKsUIfir1JCqToEa3/5eBSClz0/ji+wWz2CWD0fCoNfRQE3aaitdEww==" crossorigin="anonymous" />
+  <!-- Updating the background color to black -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+    h1 {
+      text-align: center;
+      margin: 2rem 0;
+      color: white;
+    }
+    /* Adding a footer */
+    footer {
+      text-align: center;
+      background-color: #424242;
+      padding: 1rem;
+      color: white;
+    }
+    /* Updating the category font color to white and adding a Material Design icon */
+    .category {
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .category:before {
+      font-family: 'Material Design Icons';
+      content: "\F38D";
+      margin-right: 0.5rem;
+    }
+    .categories {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: #212121;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 2rem 1rem;
+    }
+    .product {
+      flex: 0 0 30%;
+      padding: 1rem;
+      border: 1px solid #757575;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      background-color: #424242;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    .product h2 {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+    }
+    .product p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: white;
+    }
+    /* Changing the add to cart button style */
+    .product button {
+      background-color: #3F51B5;
+      color: white;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    .product button:hover {
+      background-color: #303F9F;
+    }
+    /* Updating the select dropdown and label style */
+    .filter {
+      padding: 0.5rem;
+      background-color: #212121;
+      display: flex;
+      align-items: center;
+    }
+    .filter select {
+      margin-left: 1rem;
+      padding: 0.3rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      background-color: #424242;
+      color: white;
+    }
+    .filter label {
+      margin-right: 1rem;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ecommerce Website</h1>
+  <div class="categories">
+    <div class="category">Clothing</div>
+    <div class="category">Electronics</div>
+    <div class="category">Home & Kitchen</div>
+    <div class="category">Beauty & Personal Care</div>
+  </div>
+  <div class="filter">
+    <label for="sort">Sort by:</label>
+    <select name="sort" id="sort">
+      <option value="price">Price</option>
+      <option value="latest">Latest</option>
+      <option value="top">Top Rated</option>
+    </select>
+  </div>
+  <div class="products">
+    <div class="product">
+      <img src="https://placehold.it/250x250" alt="Product image">
+      <h2>Product 1</h2>
+      <p>$25.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.it/250x250" alt="Product image">
+      <h2>Product 2</h2>
+      <p>$15.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.it/250x250" alt="Product image">
+      <h2>Product 3</h2>
+      <p>$10.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.it/250x250" alt="Product image">
+      <h2>Product 4</h2>
+      <p>$35.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.it/250x250" alt="Product image">
+      <h2>Product 5</h2>
+      <p>$20.00</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://placehold.it/250x250" alt="Product image">
+      <h2>Product 6</h2>
+      <p>$30.00</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <!-- Adding a footer with links to terms & conditions, privacy policy, contact number, and office address -->
+  <footer>
+    <a href="#">Terms & Conditions</a> | 
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Contact Number</a> | 
+    <a href="#">Office Address</a>
+  </footer>
+</body>
+</html>

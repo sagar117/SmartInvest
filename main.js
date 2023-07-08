@@ -1,30 +1,35 @@
-const { Configuration, OpenAIApi } = require("openai");
-const request = require('sync-request');
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
 
-const configuration = new Configuration({
-    apiKey: "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",
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
-const openai = new OpenAIApi(configuration);
-
-// const response = request('POST', 'https://api.openai.com/v1/images/generations', {
-//     headers: {
-//         'Content-Type': 'application/json',
-//         'Authorization': `Bearer ${configuration.apiKey}`,
-//     },
-//     json: {
-//         prompt: "A cute baby sea otter",
-//         n: 2,
-//         size: "1024x1024",
-//     },
-// });
-//
-// const responseData = JSON.parse(response.getBody('utf-8'));
-// console.log(responseData); // Process or handle the response data
-
-
-const completion = await openai.createChatCompletion({
-    model: "gpt-3.5-turbo",
-    messages: [{role: "user", content: "Hello world"}],
+app.post('/processInputs', async (req, res) => {
+  try {
+    const { featureDescription, inputFile, outputFile } = req.body;
+    await processInputs(featureDescription, inputFile, outputFile);
+    res.sendStatus(200);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
 });
-console.log(completion.data.choices[0].message);
+
+app.use((req, res) => {
+  res.status(404).send('Error: Page not found');
+});
+
+async function processInputs(featureDescription, inputFile, outputFile) {
+  // Your code here to process the inputs
+}
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});

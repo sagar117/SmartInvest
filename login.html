@@ -181,26 +181,15 @@
         });
       }
       
-      var toggle = false;
       function changeColor(){
-        if(!toggle){
-          document.body.style.backgroundColor = "#00ff00"; // Change background color to green
-          document.body.innerHTML += "<div style='text-align: center;'>piya</div>"; // Add text to the body
-          toggle = true;
-        }else{
-          document.body.style.backgroundColor = "#ffffff"; // Change background color back to white
-          document.body.innerHTML = document.body.innerHTML.replace("<div style='text-align: center;'>piya</div>",""); // Remove text from the body
-          toggle = false;
-        }
+        document.body.style.backgroundColor = "#ff0000"; // Change background color to red
       }
       
-      // Change background color and add text to the body on button click
-      document.getElementById("toggle-btn").addEventListener("click", function(){
-        changeColor();
-      });
+      // Change background color to red on button click
+      document.getElementById("toggle-btn").addEventListener("click", changeColor);
     </script>
     <button id="toggle-btn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-      Update
+      Change Background Color to Red
     </button>
   </body>
 </html>

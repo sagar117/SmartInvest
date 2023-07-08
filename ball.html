@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ball Bouncing Example</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden; /* Prevents scrollbars */
+		}
+		canvas {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+
+	<script type="text/javascript">
+		var canvas = document.getElementById("myCanvas");
+		var ctx = canvas.getContext("2d");
+
+		// Ball properties
+		var x = canvas.width/2;
+		var y = canvas.height/2;
+		var radius = 25;
+		var dx = 5;
+		var dy = 5;
+
+		function drawBall() {
+			ctx.beginPath();
+			ctx.arc(x, y, radius, 0, Math.PI*2);
+			ctx.fillStyle = "#0095DD";
+			ctx.fill();
+			ctx.closePath();
+		}
+
+		function clearCanvas() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+		}
+
+		function moveBall() {
+			clearCanvas();
+
+			drawBall();
+
+			if (x + dx > canvas.width - radius || x + dx < radius) {
+				dx = -dx * 1.1; // Reverse and increase speed by 10%
+			}
+
+			if (y + dy > canvas.height - radius || y + dy < radius) {
+				dy = -dy * 1.1; // Reverse and increase speed by 10%
+			}
+
+			x += dx;
+			y += dy;
+		}
+
+		setInterval(moveBall, 10); // Calls moveBall function every 10 milliseconds
+	</script>
+</body>
+</html>

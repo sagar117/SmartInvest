@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Form with Versioning System</title>
+	<style>
+		body {background-color: #1c1c1c; color: #fff; display: flex;}
+		form {display: flex; flex-direction: column; align-items: center; width: 50%; overflow-y: auto; height: 100vh;}
+		input[type="text"] {padding: 10px; margin-bottom: 10px; width: 100%; border: none; background-color: #333; color: inherit;}
+		textarea {padding: 10px; margin-bottom: 10px; width: 100%; height: 150px; border: none; background-color: #333; color: inherit;}
+		input[type="submit"] {padding: 10px 30px; background-color: #333; border: none; color: #fff; cursor: pointer; font-weight: bold;}
+		input[type="submit"]:hover {background-color: #999;}
+		.git-versioning {margin-left: 20px; width: 50%; font-size: 0.9em; position: sticky; top: 0;}
+		.branch-label {font-weight: bold; margin-top: 10px;}
+		.version {padding: 10px; margin-bottom: 10px; background-color: #444; color: inherit; cursor: pointer;}
+		.selected-version {background-color: #555; font-weight: bold;}
+		.rename-branch-btn {margin-left: 10px; padding: 5px;}
+		.merge-btn {padding: 5px; background-color: #333; border: none; color: #fff; cursor: pointer;}
+	</style>
+</head>
+<body>
+	<form>
+		<label>Feature Name:</label>
+		<input type="text" name="featureName" required>
+
+		<label>Objective/Purpose:</label>
+		<input type="text" name="objective" required>
+
+		<label>User Interface (UI) Requirements:</label>
+		<textarea name="uiRequirements" required></textarea>
+
+		<label>Functionality:</label>
+		<textarea name="functionality" required></textarea>
+
+		<label>Data Requirements:</label>
+		<textarea name="dataRequirements" required></textarea>
+
+		<label>Dependencies:</label>
+		<textarea name="dependencies" required></textarea>
+
+		<label>Platform/Technology:</label>
+		<textarea name="platform" required></textarea>
+
+		<label>Constraints/Limitations:</label>
+		<textarea name="constraints" required></textarea>
+
+		<label>Expected Output/Result:</label>
+		<textarea name="outputResult" required></textarea>
+
+		<label>Input File Name:</label>
+		<input type="text" name="file_name" required>
+
+		<label>Output File Name:</label>
+		<input type="text" name="file_name2" required>
+
+		<label>Branch Name:</label>
+		<input type="text" name="branchName" required>
+
+		<input type="submit" value="Push">
+	</form>
+
+	<div class="git-versioning">
+		<h2>Git-Versioning System</h2>
+		<div class="branch-label">Branches:</div>
+		<ul id="branch-list"></ul>
+		<div class="version-label">Versions:</div>
+		<ul id="version-list"></ul>
+		<button id="new-branch-btn">Create New Branch</button>
+	</div>
+
+	<script>
+		let branches = {
+			'main': []
+		};
+		let currentBranch = 'main';
+
+		const branchList = document.getElementById('branch-list');
+		const versionList = document.getElementById('version-list');
+		const newBranchBtn = document.getElementById('new-branch-btn');
+
+		// On form submit, create a new version and add to specified branch in branch list
+		const form = document.querySelector('form');
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+			const inputs = form.querySelectorAll('input:not([type="submit"]), textarea');
+			let version = {};
+			inputs.forEach(input => {
+				version[input.name] = input.value;
+				input.value = '';
+			});
+
+			const branchName = inputs[inputs.length - 1].value;
+			if (branches[branchName]) {
+				branches[branchName].push(version);
+				addVersion(version);
+			} else {
+				// If branch doesn't exist, create it and add version to it
+				addBranch(branchName);
+				branches[branchName].push(version);
+				addVersion(version);
+			}
+			createNewBranch(branchName);
+		});
+
+		// Add branch to branch list
+		function addBranch(name) {
+			let li = document.createElement('li');
+			li.innerText = name;
+			li.addEventListener('click', function() {
+				selectBranch(name);
+			});
+			branchList.appendChild(li);
+			branches[name] = [];
+			selectBranch(name);
+		}
+
+		// Select a branch and show its versions
+		function selectBranch(name) {
+			const branches = document.querySelectorAll('#branch-list li');
+			branches.forEach(b => {
+				if (b.innerText === currentBranch) {
+					b.classList.remove('selected-version');
+				}
+			});
+
+			const selectedBranch = Array.from(branches).find(b => b.innerText === name);
+			selectedBranch.classList.add('selected-version');
+			currentBranch = name;
+
+			displayVersions();
+		}
+
+		// Display versions of the current branch
+		function displayVersions() {
+			versionList.innerHTML = '';
+			branches[currentBranch].forEach(version => {
+				let li = document.createElement('li');
+				li.className = 'version';
+				li.innerText = `${version.featureName} (${currentBranch})`;
+				li.addEventListener('click', function() {
+					selectVersion(version);
+				});
+				versionList.insertBefore(li, versionList.firstChild);
+			});
+		}
+
+		// Add version to current branch in branch list
+		function addVersion(version) {
+			let li = document.createElement('li');
+			li.className = 'version';
+			li.innerText = `${version.featureName} (${currentBranch})`;
+			li.addEventListener('click', function() {
+				selectVersion(version);
+			});
+			versionList.insertBefore(li, versionList.firstChild);
+		}
+
+		// Select a version and highlight it
+		function selectVersion(version) {
+			const versions = document.querySelectorAll('.version');
+			versions.forEach(v => {
+				v.classList.remove('selected-version');
+			});
+			const selectedVersion = Array.from(versions).find(v => v.innerText === `${version.featureName} (${currentBranch})`);
+			selectedVersion.classList.add('selected-version');
+		}
+
+		// On new branch button click, create a new branch and add to branch list
+		newBranchBtn.addEventListener('click', function() {
+			const inputs = form.querySelectorAll('input:not([type="submit"]), textarea');
+			const branchName = inputs[inputs.length - 1].value;
+			if (branchName && !branches[branchName]) {
+				addBranch(branchName);
+				createNewBranch(branchName);
+			}
+		});
+
+		// Rename current branch
+		window.renameBranch = function() {
+			const newBranchName = prompt('Enter new branch name:');
+			if (newBranchName && !branches[newBranchName]) {
+				const currentBranchIndex = Array.from(branchList.children).findIndex(li => li.innerText === currentBranch);
+				branchList.children[currentBranchIndex].innerText = newBranchName;
+				branches[newBranchName] = branches[currentBranch];
+				delete branches[currentBranch];
+				currentBranch = newBranchName;
+			}
+		};
+
+		// Create new branch and add to branch list
+		function createNewBranch(name) {
+			let newBranchName = name.replace(/ /g,''); // Remove spaces
+			if (!branches[newBranchName]) {
+				addBranch(newBranchName);
+			}
+		}
+
+		// Merge version into main branch
+		window.mergeVersion = function() {
+			const versions = document.querySelectorAll('.version');
+			let selectedVersion = null;
+			versions.forEach(v => {
+				if (v.classList.contains('selected-version')) {
+					selectedVersion = v;
+				}
+			});
+
+			if (selectedVersion !== null) {
+				// Remove version from current branch
+				const versionIndex = branches[currentBranch].findIndex(v => `${v.featureName} (${currentBranch})` === selectedVersion.innerText);
+				branches[currentBranch].splice(versionIndex, 1);
+				selectedVersion.remove();
+
+				// Update version's branch and add to main branch
+				const versionParts = selectedVersion.innerText.split(' ');
+				const featureName = versionParts[0];
+				const versionBranch = versionParts[1].replace(/[()]/g, '');
+				const version = branches[versionBranch].find(v => v.featureName === featureName);
+				version.branchName = 'main';
+				branches['main'].push(version);
+
+				// Update UI
+				selectBranch('main');
+				selectVersion(version);
+			}
+		};
+	</script>
+	<button class="merge-btn" onclick="mergeVersion()">Merge Version into Main</button>
+</body>
+</html>

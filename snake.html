@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake Game</title>
+	<style>
+		/*Styling for game board*/
+		#board{
+			position: relative;
+			width: 400px;
+			height: 400px;
+			border: 1px solid black;
+			margin: 0 auto;
+		}
+		/*Styling for snake*/
+		.snake{
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: green;
+			border: 1px solid black;
+		}
+		/*Styling for point*/
+		.point{
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<!--Game board-->
+	<div id="board"></div>
+
+	<!--Script for game mechanics-->
+	<script>
+		//Initial snake direction
+		var dx = 10;
+		var dy = 0;
+
+		//Initial snake body
+		var snake = [{x: 60, y: 200},
+					 {x: 50, y: 200},
+					 {x: 40, y: 200}];
+		//Initial point position
+		var point = {x: 300, y: 200};
+
+		//Movement function for snake
+		function moveSnake(){
+			//Remove tail
+			snake.pop();
+			//Calculate new head position
+			var newX = snake[0].x + dx;
+			var newY = snake[0].y + dy;
+			//Add new head
+			snake.unshift({x: newX, y: newY});
+			//Check for collision with wall
+			if(newX < 0 || newX > 390 || newY < 0 || newY > 390){
+				clearInterval(intervalID);
+				alert("Game Over!");
+			}
+			//Check for collision with point
+			if(newX == point.x && newY == point.y){
+				//Increase snake length
+				snake.push({});
+				//Generate new point
+				generatePoint();
+			}
+			//Redraw snake
+			drawSnake();
+		}
+
+		//Function to generate new point
+		function generatePoint(){
+			//Generate random point position
+			point.x = Math.floor(Math.random() * 39) * 10;
+			point.y = Math.floor(Math.random() * 39) * 10;
+			//Check for overlap with snake
+			for(var i = 0; i < snake.length; i++){
+				if(point.x == snake[i].x && point.y == snake[i].y){
+					//If overlap, generate new point
+					generatePoint();
+					break;
+				}
+			}
+			//Draw point
+			drawPoint();
+		}
+
+		//Function to draw snake
+		function drawSnake(){
+			//Remove old snake
+			var oldSnake = document.getElementsByClassName("snake");
+			for(var i = oldSnake.length - 1; i >= 0; i--){
+				oldSnake[i].parentNode.removeChild(oldSnake[i]);
+			}
+			//Draw new snake
+			for(var i = 0; i < snake.length; i++){
+				var newDiv = document.createElement("div");
+				newDiv.className = "snake";
+				newDiv.style.left = snake[i].x + "px";
+				newDiv.style.top = snake[i].y + "px";
+				document.getElementById("board").appendChild(newDiv);
+			}
+		}
+
+		//Function to draw point
+		function drawPoint(){
+			//Remove old point
+			var oldPoint = document.getElementsByClassName("point")[0];
+			oldPoint.parentNode.removeChild(oldPoint);
+			//Draw new point
+			var newDiv = document.createElement("div");
+			newDiv.className = "point";
+			newDiv.style.left = point.x + "px";
+			newDiv.style.top = point.y + "px";
+			document.getElementById("board").appendChild(newDiv);
+		}
+
+		//Function to change snake direction
+		function changeDirection(event){
+			//Arrow key codes
+			var leftArrow = 37;
+			var upArrow = 38;
+			var rightArrow = 39;
+			var downArrow = 40;
+			//Get key code from event
+			var keyCode = event.keyCode;
+			//Change direction based on key code
+			if(keyCode == leftArrow && dx != 10){
+				dx = -10;
+				dy = 0;
+			}
+			else if(keyCode == upArrow && dy != 10){
+				dx = 0;
+				dy = -10;
+			}
+			else if(keyCode == rightArrow && dx != -10){
+				dx = 10;
+				dy = 0;
+			}
+			else if(keyCode == downArrow && dy != -10){
+				dx = 0;
+				dy = 10;
+			}
+		}
+
+		//Generate initial point and draw it
+		generatePoint();
+		drawPoint();
+
+		//Add event listener for arrow keys
+		document.addEventListener("keydown", changeDirection);
+
+		//Start game loop
+		var intervalID = setInterval(moveSnake, 100);
+	</script>
+
+</body>
+</html>

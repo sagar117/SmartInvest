@@ -10,15 +10,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let featureName;
-let objective;
-let uiRequirements;
-let functionality;
-let dataRequirements;
-let dependencies;
-let platform;
-let constraints;
-let outputResult;
+let feature; // Declare a global variable
 let file_name;
 let file_name2;
 
@@ -31,49 +23,32 @@ function askQuestion(question) {
 }
 
 async function collectInputs() {
-    featureName = await askQuestion('Feature Name: ');
-    objective = await askQuestion('Objective/Purpose: ');
-    uiRequirements = await askQuestion('User Interface (UI) Requirements: ');
-    functionality = await askQuestion('Functionality: ');
-    dataRequirements = await askQuestion('Data Requirements: ');
-    dependencies = await askQuestion('Dependencies: ');
-    platform = await askQuestion('Platform/Technology: ');
-    constraints = await askQuestion('Constraints/Limitations: ');
-    outputResult = await askQuestion('Expected Output/Result: ');
-    file_name = await askQuestion('Input File Name: ');
-    file_name2 = await askQuestion('Output File Name: ');
+    const feature = await askQuestion('Describe your feature');
+    const file_name = await askQuestion('File Name');
+    const file_name2 = await askQuestion('File Name2');
+    // const city = await askQuestion('Which city do you live in? ');
 
-    console.log(`Feature Name: ${featureName}`);
-    console.log(`Objective/Purpose: ${objective}`);
-    console.log(`User Interface (UI) Requirements: ${uiRequirements}`);
-    console.log(`Functionality: ${functionality}`);
-    console.log(`Data Requirements: ${dataRequirements}`);
-    console.log(`Dependencies: ${dependencies}`);
-    console.log(`Platform/Technology: ${platform}`);
-    console.log(`Constraints/Limitations: ${constraints}`);
-    console.log(`Expected Output/Result: ${outputResult}`);
-    console.log(`Input File: ${file_name}`);
-    console.log(`Output File: ${file_name2}`);
+    // Process the collected inputs
+    console.log(`Feature: ${feature}`);
+    console.log(`Input file: ${file_name}`);
+    console.log(`Output file: ${file_name2}`);
+    // console.log(`City: ${city}`);
 
     rl.close();
 
-    if (
-        featureName &&
-        objective &&
-        file_name &&
-        file_name2
-    ) {
-        console.log("Feature is building");
+    if (feature && file_name && file_name2) {
+        console.log("Feature is building")
 
-        // Example usage of the global variable outside the readline interface
+
+// Example usage of the global variable outside the readline interface
         setTimeout(() => {
-            console.log(`User input (global variable): ${featureName}`);
+            console.log(`User input (global variable): ${feature}`);
         }, 2000);
 
         const readFileAsync = util.promisify(fs.readFile);
         const writeFileAsync = util.promisify(fs.writeFile);
-        const filePath = '/Users/sagar/WebstormProjects/GPTdev/' + file_name;
-        const filePath2 = '/Users/sagar/WebstormProjects/GPTdev/' + file_name2;
+        const filePath = '/Users/sagar/WebstormProjects/GPTdev/'+file_name;
+        const filePath2 = '/Users/sagar/WebstormProjects/GPTdev/'+file_name2;
 
         const configuration = new Configuration({
             apiKey: "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",
@@ -83,9 +58,7 @@ async function collectInputs() {
         async function fetchChatCompletion(fileContent) {
             const data = JSON.stringify({
                 model: "gpt-3.5-turbo",
-                messages: [
-                    { role: "user", content: `Feature Name: ${featureName}\nObjective/Purpose: ${objective}\nUser Interface (UI) Requirements: ${uiRequirements}\nFunctionality: ${functionality}\nData Requirements: ${dataRequirements}\nDependencies: ${dependencies}\nPlatform/Technology: ${platform}\nConstraints/Limitations: ${constraints}\nExpected Output/Result: ${outputResult}\n` + "update and rewrite code!, write only code no description \\n"+ fileContent }
-                ],
+                messages: [{role: "user", content: feature + "update and rewrite code!, write only code no description \n" + fileContent}],
             });
 
             const options = {
@@ -132,6 +105,7 @@ async function collectInputs() {
             })
             .then(response => {
                 console.log(response);
+
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -140,9 +114,7 @@ async function collectInputs() {
         async function updateFileWithCode(fileContent) {
             try {
                 const response = await fetchChatCompletion(fileContent);
-                const codeResponse = response.content.replace(`Feature Name: ${featureName}\nObjective/Purpose: ${objective}\nUser Interface (UI) Requirements: ${uiRequirements}\nFunctionality: ${functionality}\nData Requirements: ${dataRequirements}\nDependencies: ${dependencies}\nPlatform/Technology: ${platform}\nConstraints/Limitations: ${constraints}\nExpected Output/Result: ${outputResult}\n`, '');
-                // Extract the code instructions from the codeResponse
-                const codeInstructions = codeResponse.split('\n').filter(line => line.startsWith('//'));
+                const codeResponse = response.content.replace(feature + "update and rewrite code! \n", ''); // Extract coding part of the response
 
                 // Check if the file exists
                 const fileExists = fs.existsSync(filePath2);
