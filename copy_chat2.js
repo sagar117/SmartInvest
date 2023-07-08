@@ -51,7 +51,7 @@ async function collectInputs() {
         const filePath2 = '/Users/sagar/WebstormProjects/GPTdev/'+file_name2;
 
         const configuration = new Configuration({
-            apiKey: "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",
+            apiKey: "",
         });
         const openai = new OpenAIApi(configuration);
 
