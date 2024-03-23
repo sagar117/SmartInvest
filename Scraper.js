@@ -44,7 +44,11 @@ async function scrapeFinancialData(stockSymbol) {
 async function getFirstGoogleSearchLink(query) {
   try {
     const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-    const response = await axios.get(searchUrl);
+    const response = await axios.get(searchUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+      },
+    });
 
     if (response.status === 200) {
       const html = response.data;
