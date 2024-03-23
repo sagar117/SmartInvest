@@ -21,9 +21,9 @@ app.use((req, res, next) => {
 });
 
 // // Replace this with your actual OpenAI API key
-// const openai = new OpenAIApi({ apiKey: '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' });
+// const openai = new OpenAIApi({ apiKey: '' });
 // const configuration = new Configuration({
-//     apiKey: "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",
+//     apiKey: "",
 // });
 
 // Initialize OpenAI API client with the API key from environment variable
@@ -161,7 +161,7 @@ app.post('/process', function(req, res) {
         const filePath2 = __dirname + '/' + outputFileName;
 
         // const configuration = new Configuration({
-        //     apiKey: "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",
+        //     apiKey: "",
         // });
         const openaiApiKey = process.env.OPENAI_API_KEY;
 
