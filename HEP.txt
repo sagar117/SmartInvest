@@ -1,0 +1,25 @@
+// Function to sort exercises based on difficulty level
+const sortExercises = (exercises) => {
+  exercises.sort((a, b) => {
+    return a.difficulty - b.difficulty;
+  });
+
+  return exercises;
+};
+
+// Sample exercises data
+const exercises = [
+  { name: 'Push-ups', difficulty: 3 },
+  { name: 'Squats', difficulty: 2 },
+  { name: 'Plank', difficulty: 1 },
+  { name: 'Bicep curls', difficulty: 4 },
+  { name: 'Lunges', difficulty: 2 }
+];
+
+// Sorting exercises based on difficulty level
+const sortedExercises = sortExercises(exercises);
+
+// Printing the sorted list of exercises
+sortedExercises.forEach((exercise, index) => {
+  console.log(`${index + 1}. ${exercise.name} - Difficulty: ${exercise.difficulty}`);
+});

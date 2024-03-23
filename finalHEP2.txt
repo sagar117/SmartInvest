@@ -1,0 +1,203 @@
+DB R External rotation at 0 side lying	XGEN2135
+DB L External rotation at 0 side lying	XGEN2135
+DB R External rotation at 90 standing	GEN2541
+DB L External rotation at 90 standing	GEN2541
+DB R External rotation at 90 supine	GEN192996
+DB L External rotation at 90 supine	GEN192996
+DB R External rotation at 90 prone	XGEN56
+DB L External rotation at 90 prone	XGEN56
+DB R Internal rotation at 90 supine	GEN525303
+DB L Internal rotation at 90 supine	GEN525303
+DB R Dumbell rows (Unilateral) standing	GEN448627
+DB L Dumbell rows (Unilateral) standing	GEN448627
+DB  Dumbell rows (Bilateral) standing	XGEN1546
+R Pectoralis against wall	XGEN2043
+L Pectoralis against wall	XGEN2043
+R Latissimus Stretch	GEN280304
+L Latissimus Stretch	GEN280304
+R Posterior capsule stretch	GEN16225
+L Posterior capsule stretch	GEN16225
+R Triceps stretch 	XGEN469
+L Triceps stretch 	XGEN469
+R Shoulder flexion stretch, hands on table	GEN525299
+L Shoulder flexion stretch, hands on table	GEN525299
+Quadruped shoulder touches	GEN117814
+R Arm circles against wall with ball	GEN191691
+L Arm circles against wall with ball	GEN191691
+Wall push up	XGEN1532
+Wall scap push up	GEN100641
+Quadruped scap push up (Push up plus)	GEN100639
+Push up	XGEN1525
+Modified push up	XGEN1526
+R Elbow Flexion- Extension  standing	GEN2496
+L Elbow Flexion - Extension standing	GEN2496
+R Elbow Flexion - Extension sitting	GEN16781
+L Elbow Flexion - Extension sitting	GEN16781
+R Elbow Flexion - Extension supine	GEN105406
+L Elbow Flexion- Extension supine	GEN105406
+R Pronation	GEN443212
+L Pronation	GEN443212
+R Supination	XGEN102
+L Supination	XGEN102
+AAROM/ STICK R Elbow flexion - Extension Standing	GEN97795
+AAROM/ STICK L Elbow flexion - Extension Standing	GEN97795
+R Pronation with the help of other hand	GEN23865
+L Pronation with the help of other hand	GEN23865
+R Supination with the help of other hand	XGEN2113
+L Supination with the help of other hand	XGEN2113
+R Elbow Flexion in supination against other hand	GEN16784
+L Elbow Flexion in supination against other hand	GEN16784
+R Elbow Flexion in neutral against other hand	GEN16788
+L Elbow Flexion in neutral against other hand	GEN16788
+R Elbow Flexion in pronation against other hand	GEN16786
+L Elbow Flexion in pronation against other hand	GEN16786
+R Elbow Extension against other hand	XGEN1573
+L Elbow Extension against other hand	XGEN1573
+R Supination against other hand	GEN296680
+L Supination against other hand	GEN296680
+R Pronation against other hand	XGEN1574
+L Pronation against other hand	XGEN1574
+TB R Elbow Flexion	GEN15428
+TB L Elbow Flexion	GEN15428
+TB R Pronation	GEN312002
+TB L Pronation	GEN312002
+TB R Supination	GEN285349
+TB L Supination	GEN285349
+DB R Biceps curl standing	GEN102702
+DB L Biceps curl standing	GEN102702
+Biceps curl Dumbell supine	GEN121087
+R Biceps curl Dumbell supine	GEN121087
+L Biceps curl Dumbell supine	GEN121087
+DB R Pronation- Supination	GEN101999
+DB L Pronation- Supination	GEN15944
+R Triceps stretch 	XGEN469
+L Triceps stretch 	XGEN469
+R Wrist Flexion (pronation)	GEN443206
+L Wrist Flexion (pronation)	GEN443206
+R Wrist  Extension	XGEN193
+L Wrist  Extension	XGEN193
+R Wrist  Radial deviation (mid-pronation)	GEN2497
+L Wrist  Radial deviation (mid-pronation)	GEN2497
+L Iliopsoas stretch 	GEN12266
+R Wrist  Ulnar deviation (mid-pronation)	XGEN198
+L Wrist  Ulnar deviation (mid-pronation)	XGEN198
+Wrist flexion and extension - palms together	XGEN447
+Wrist radial/ulnar deviation - hands interlaced	GEN312000
+L Finger flexion and extension (grip release)	GEN15938
+R Finger flexion and extension (grip release)	GEN15938
+L Opposition/ Make O shapes with your thumb and fingers	GEN95317
+R Opposition/ Make O shapes with your thumb and fingers	GEN95317
+L Finger abduction/adduction - palm down	GEN43470
+R Finger abduction/adduction - palm down	GEN43470
+R Finger MCP joint flexion/extension - palm down	HAN376604
+L Finger MCP joint flexion/extension - palm down	HAN376604
+Grip squeeze - fingers flexion	GEN15938
+R Wrist rotation	GEN100622
+L Wrist rotation	GEN100622
+R Wrist Flexion with the help of other hand	GEN15514
+L Wrist Flexion with the help of other hand	GEN15514
+R Wrist  Extension with the help of other hand	GEN94519
+L Wrist  Extension with the help of other hand	GEN94519
+R Wrist  Radial deviation with the help of other hand	GEN15522
+L Wrist  Radial deviation with the help of other hand	GEN15522
+R Wrist Ulnar deviation with the help of other hand	GEN15522
+L Wrist Ulnar deviation with the help of other hand	GEN15522
+R wrist flexion on the table 	GEN15515
+L wrist flexion on the table 	GEN15515
+R wrist extension on the table 	GEN15517
+L wrist extension on the table 	GEN15517
+R wrist extension quadruped	GEN15526
+L wrist extension quadruped	GEN15526
+R wrist Flexion against other hand	XGEN1575
+L wrist Flexion against other hand	XGEN1575
+R wrist Extension against other hand	XGEN1573
+L wrist Extension against other hand	XGEN1573
+R wrist Radial deviation against other hand	XGEN1578
+L wrist Radial deviation against other hand	XGEN1578
+R wrist Ulnar deviation against other hand	XGEN1577
+L wrist Ulnar deviation against other hand	XGEN1577
+R Resisting finger opposition with other hand' finger	GEN17043
+L Resisting finger opposition with other hand' finger	GEN17043
+TB R Wrist flexion	XGEN1569
+TB L Wrist flexion	XGEN1569
+TB R Wrist extension 	GEN27466
+TB L Wrist extension 	GEN27466
+TB R Wrist radial deviation 	XGEN1571
+TB L Wrist radial deviation 	XGEN1571
+TB R wrist ulnar deviation	GEN279359
+TB L wrist ulnar deviation	GEN279359
+DB R Flexion (uniateral)	XGEN2108
+DB L Flexion (uniateral)	XGEN2108
+DB Flexion (bilateral)	XGEN2108
+DB R Extension (uniateral)	GEN2494
+DB L Extension (uniateral)	GEN2494
+DB Extension (bilateral)	XGEN2109
+DB Radial deviation (bilateral)	GEN89992
+DB R Radial deviation (uniateral)	XGEN1580
+DB L Radial deviation (uniateral)	XGEN1580
+DB R Ulnar deviation (uniateral)	GEN15942
+DB L Ulnar deviation (uniateral)	GEN15942
+R Wrist flexors Strech 	XGEN1558
+L Wrist flexors Strech 	XGEN1558
+R Wrist extensors stretch	XGEN1556
+L Wrist extensors stretch	XGEN1556
+ThoracoLumbar Flexion standing	XGEN337
+L Knee to chest stretch 	XGEN1650
+ThoracoLumbar Extension	XGEN2213
+ThoracoLumbar L Side flexion	XGEN2087
+ThoracoLumbar R Side flexion	XGEN2087
+ThoracoLumbar R Side rotation	GEN17853
+ThoracoLumbar L Side rotation	GEN17853
+Prone on elbows/ Extension on forearm	XGEN1604
+Prone on hands / Extension on hands	XGEN2151
+Pelvic tilting crook lying	GEN196410
+Pelvic tilting sitting	GEN98571
+Pelvic tilting supine	GEN578062
+Pelvic tilting quaruped	XGEN1445
+Lumbar rotations	GEN42551
+L Shoulder Abduction wall walk	XGEN2118
+L Single leg bridging	GEN41437
+Superman 	XGEN335
+Cat and camel	"ECH41336
+"
+TA activation with heel slides	GEN39334
+TA activation	GEN39324
+TA activation with glut and pelvic floor activation	GEN42122
+Kegel's exercise	GEN525282
+Dead bugs	XGEN2170
+Dead bug stability ball	GEN196500
+Dead bug foam roller	GEN212782
+Elbow Plank	XGEN2183
+High Plank	XGEN2185
+R Side plank	GEN119938
+L Side plank	GEN119938
+L Wrist  Radial deviation (pronation)	GEN2498
+Thoracolumbar rotations with theraband	GEN285030
+Forward bending stretch standing	XGEN2092
+Forward bending stretch long sitting	XGEN2208
+Forward bending stretch long sitting with left leg bent	XGEN261
+Forward bending stretch long sitting with right leg bent	XGEN261
+Extension on hands/ bhujangasana	GEN198430
+R Lumbar rotation stretch both knees bent	XGEN222
+L Lumbar rotation stretch both knees bent	XGEN222
+R Lumbar rotation stretch one knee bent/crossover	GEN41092
+L Lumbar rotation stretch one knee bent/crossover	GEN41092
+R Figure of 4 Supine 	"GEN94180
+"
+L Figure of 4 Supine 	"GEN94180
+"
+R Figure of 4 Sitting	GEN17754
+L Figure of 4 Sitting	GEN17754
+Child' pose	XGEN1594
+Vajrasana 	GEN225916
+downward facing dog 	GEN211856
+R Full body stretch with arms stretched up and side bending 	GEN436101
+L Full body stretch with arms stretched up and side bending 	GEN436101
+Bridging on ball 	GEN41517
+Abs crunches with feet on ball	GEN547824
+Abs crunches 	XGEN655
+foam rollling for back 	GEN98322
+Bilateral SLR	GEN97417
+R Hip Flexion (Hip-knee flexion)	GEN601347, XGEN347
+L Hip Flexion (Hip-knee flexion)	GEN601347, XGEN347
+R Straight leg raise (flexion)	XGEN349

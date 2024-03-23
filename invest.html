@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Analysis | Your Personal Investment Guide</title>
+  <style>
+    /* CSS Styles for the professional financial analysis site */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    .input-field {
+      margin-bottom: 20px;
+    }
+    .input-box {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .input-box:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+    .output {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    .response {
+      margin-bottom: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Financial Analysis | Your Personal Investment Guide</h1>
+    <div class="input-field">
+      <label for "query">Enter your investment query:</label>
+      <input type="text" id="query" class="input-box" placeholder="Search for stocks, funds, etc.">
+    </div>
+    <button onclick="submitQuery()" class="submit-btn">Submit</button>
+
+    <div id="output-container" class="output">
+      <h2>Result:</h2>
+      <div id="response" class="response"></div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code to handle user interaction and API requests
+    async function submitQuery() {
+      const query = document.getElementById('query').value;
+      const responseContainer = document.getElementById('response');
+
+      const response = await fetch('/api/investment-guide', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ query })
+      });
+
+      const result = await response.text();
+
+      responseContainer.innerHTML = result;
+    }
+  </script>
+</body>
+</html>

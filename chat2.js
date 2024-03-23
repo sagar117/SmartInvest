@@ -19,6 +19,7 @@ let dependencies;
 let platform;
 let constraints;
 let outputResult;
+let instructions
 let file_name;
 let file_name2;
 
@@ -40,6 +41,7 @@ async function collectInputs() {
     platform = await askQuestion('Platform/Technology: ');
     constraints = await askQuestion('Constraints/Limitations: ');
     outputResult = await askQuestion('Expected Output/Result: ');
+    instructions = await askQuestion("instructions: ");
     file_name = await askQuestion('Input File Name: ');
     file_name2 = await askQuestion('Output File Name: ');
 
@@ -52,6 +54,7 @@ async function collectInputs() {
     console.log(`Platform/Technology: ${platform}`);
     console.log(`Constraints/Limitations: ${constraints}`);
     console.log(`Expected Output/Result: ${outputResult}`);
+    console.log(`Instructions: ${instructions}`)
     console.log(`Input File: ${file_name}`);
     console.log(`Output File: ${file_name2}`);
 
@@ -76,7 +79,7 @@ async function collectInputs() {
         const filePath2 = '/Users/sagar/WebstormProjects/GPTdev/' + file_name2;
 
         const configuration = new Configuration({
-            apiKey: "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",
+            apiKey: "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",
         });
         const openai = new OpenAIApi(configuration);
 
@@ -84,7 +87,7 @@ async function collectInputs() {
             const data = JSON.stringify({
                 model: "gpt-3.5-turbo",
                 messages: [
-                    { role: "user", content: `Feature Name: ${featureName}\nObjective/Purpose: ${objective}\nUser Interface (UI) Requirements: ${uiRequirements}\nFunctionality: ${functionality}\nData Requirements: ${dataRequirements}\nDependencies: ${dependencies}\nPlatform/Technology: ${platform}\nConstraints/Limitations: ${constraints}\nExpected Output/Result: ${outputResult}\n` + "update and rewrite code!, write only code no description \\n"+ fileContent }
+                    { role: "user", content: `Feature Name: ${featureName}\nObjective/Purpose: ${objective}\nUser Interface (UI) Requirements: ${uiRequirements}\nFunctionality: ${functionality}\nData Requirements: ${dataRequirements}\nDependencies: ${dependencies}\nPlatform/Technology: ${platform}\nConstraints/Limitations: ${constraints}\nExpected Output/Result: ${outputResult}\n +Instructions: ${instructions}`+ fileContent }
                 ],
             });
 
@@ -140,7 +143,7 @@ async function collectInputs() {
         async function updateFileWithCode(fileContent) {
             try {
                 const response = await fetchChatCompletion(fileContent);
-                const codeResponse = response.content.replace(`Feature Name: ${featureName}\nObjective/Purpose: ${objective}\nUser Interface (UI) Requirements: ${uiRequirements}\nFunctionality: ${functionality}\nData Requirements: ${dataRequirements}\nDependencies: ${dependencies}\nPlatform/Technology: ${platform}\nConstraints/Limitations: ${constraints}\nExpected Output/Result: ${outputResult}\n`, '');
+                const codeResponse = response.content.replace(`Feature Name: ${featureName}\nObjective/Purpose: ${objective}\nUser Interface (UI) Requirements: ${uiRequirements}\nFunctionality: ${functionality}\nData Requirements: ${dataRequirements}\nDependencies: ${dependencies}\nPlatform/Technology: ${platform}\nConstraints/Limitations: ${constraints}\nExpected Output/Result: ${outputResult}\n +Instructions: ${instructions}`, '');
                 // Extract the code instructions from the codeResponse
                 const codeInstructions = codeResponse.split('\n').filter(line => line.startsWith('//'));
 

@@ -1,0 +1,200 @@
+tag	exercise_code
+Cervical flexion sitting	XGEN2068
+Cervical flexion standing	XGEN28
+Cervical flexion supine	GEN17757
+Abduction against band (knee bent)	GEN119722
+Cervical extension sitting	XGEN27
+Cervical extension standing	XGEN27
+R Cervical side flexion sitting	GEN101732
+L Cervical side flexion sitting	GEN102042
+R Cervical side flexion standing	XGEN24
+L Cervical side flexion standing	XGEN24
+R Cervical side rotation sitting	XGEN25
+L Cervical side rotation sitting	XGEN25
+R Cervical side rotation standing	XGEN2065
+L Cervical side rotation standing	XGEN2065
+Chin tuck/ cervical retraction sitting	XGEN26
+Chin tuck/ cervical retraction standing	XGEN26
+Chin tuck/ cervical retraction supine	XGEN38
+Chin tuck/ cervical retraction prone	GEN279363
+Neck rotation (circumduction)	GEN100725
+Cervical flexion isometric	XGEN29
+Cervical extension isometric	GEN118611
+R Cervical side flexion isometric	XGEN420
+L Cervical side flexion isometric	XGEN420
+R Cervical rotation isometric	XGEN30
+L Cervical rotation isometric	XGEN30
+R Upper trapezius/ Middle scalene stretch	XGEN33
+L Upper trapezius/ Middle scalene stretch	XGEN33
+R Anterior scalene stretch	GEN99532
+L Anterior scalene stretch	GEN99532
+R Posterior scalene/ Levator scapulae stretch	GEN13736
+L Posterior scalene/ Levator scapulae stretch	GEN13736
+Neck traction	GEN98302
+R Shoulder flexion standing (180)	GEN98718
+L Shoulder flexion standing (180)	GEN98718
+R Shoulder flexion crook lying (180)	GEN97567
+L Shoulder flexion crook lying(180)	GEN97567
+R Shoulder flexion standing (90)	GEN91174
+L Shoulder flexion standing (90)	GEN91174
+R Shoulder flexion crook lying (90)	GEN196508
+L Shoulder flexion crook lying (90)	GEN196508
+R Shoulder Extension standing	XGEN128
+L Shoulder Extension standing	XGEN128
+R Shoulder Extension prone	GEN16237
+L Shoulder Extension prone	GEN16237
+R Shoulder Abduction (180)	GEN98721
+L Shoulder Abduction (180)	GEN98721
+R Shoulder Abduction (90)	GEN91175
+L Shoulder Abduction (90)	GEN91175
+R Shoulder External rotation at 0 standing	XGEN74
+L Shoulder External rotation at 0 standing	XGEN74
+R Shoulder External rotation at 0 side lying	GEN284403
+L Shoulder External rotation at 0 side lying	GEN284403
+R Shoulder External rotation at 90 standing	GEN86750
+L Shoulder External rotation at 90 standing	GEN86750
+R Shoulder External rotation at 90 supine	XGEN139
+L Shoulder External rotation at 90 supine	XGEN139
+R Shoulder Internal rotation at 90 standing	GEN100621
+L Shoulder Internal rotation at 90 standing	GEN100621
+R Shoulder Internal rotation at 90 standing	GEN100621
+L Shoulder Internal rotation at 90 standing	GEN100621
+R Shoulder Internal rotation at 90 supine	XGEN142
+L Shoulder Internal rotation at 90 supine	XGEN142
+Scapular protraction standing 	GEN16412
+Scapular protraction sitting 	GEN16412
+Scapular retraction standing	XGEN51
+Scapular retraction sitting	XGEN51
+Scapular setting	GEN15444
+I prone	GEN285040
+Y prone	GEN89888
+T prone	GEN95301
+W prone	GEN95300
+Shoulder circumduction (bent arm)	XGEN70
+Shoulder circumduction (straight arm)	GEN298746
+Shoulder shrug	GEN12704
+R Pendulum flexion-extension	GEN38154
+L Pendulum flexion-extension	GEN38154
+R Pendulum abduction- adduction	GEN38173
+L Pendulum abduction- adduction	GEN38173
+R Pendulum circumduction	GEN284486
+L Pendulum circumduction	GEN284486
+Snow angels 	GEN195429
+R Shoulder internal/external rotation - sitting supported	GEN104077
+L Shoulder internal/external rotation - sitting supported	GEN104077
+R Shoulder Flexion with help of other hand (180) standing	XGEN457
+L Shoulder Flexion with help of other hand (180) standing	XGEN457
+R Shoulder Flexion with help of other hand (180) crook lying	GEN98514
+L Shoulder Flexion with help of other hand (180) crook lying	GEN98514
+R Shoulder Flexion with help of other hand (90) crook lying	GEN121655
+L Shoulder Flexion with help of other hand (90) crook lying	GEN121655
+R Shoulder Flexion with stick (180)	GEN299352
+L Shoulder Flexion with stick (180)	GEN299352
+R Shoulder Flexion with stick (90)	GEN195420
+L Shoulder Flexion with stick (90)	GEN195420
+R Shoulder Flexion wall slide (towel)	GEN219519
+L Shoulder Flexion wall slide (towel)	GEN219519
+R Shoulder Flexion wall walk	XGEN132
+L Shoulder Flexion wall walk	XGEN132
+R Shoulder Flexion with pulley	GEN2570
+L Shoulder Flexion with pulley	GEN2570
+R Shoulder Extension with stick	XGEN470
+L Shoulder Extension with stick	XGEN470
+R Shoulder Abduction with stick (180)	GEN41434
+L Shoulder Abduction with stick (180)	GEN41434
+R Shoulder Abduction with stick (90)	XGEN1554
+L Shoulder Abduction with stick (90)	XGEN1554
+R Shoulder Abduction wall slide (towel)	GEN219520
+L Shoulder Abduction wall slide (towel)	GEN219520
+R Shoulder Abduction with pulley	GEN2571
+L Shoulder Abduction with pulley	GEN2571
+R Shoulder External rotation at 0 with stick	XGEN1553
+L Shoulder External rotation at 0 with stick	XGEN1553
+R Shoulder Hand behind the back with towel	XGEN135
+L Shoulder Hand behind the back with towel	XGEN135
+R Shoulder Flexion against wall (straight arm)	GEN291179
+L Shoulder Flexion against wall (straight arm)	GEN291179
+R Shoulder Flexion against wall (bent arm)	XGEN434
+L Shoulder Flexion against wall (bent arm)	XGEN434
+R Shoulder Extension against wall (straight arm)	GEN472295
+L Shoulder Extension against wall (straight arm)	GEN472295
+R Shoulder Extension against wall (bent arm)	XGEN429
+L Shoulder Extension against wall (bent arm)	XGEN429
+R Shoulder Abduction against wall (straight arm)	XGEN431
+L Shoulder Abduction against wall (straight arm)	XGEN431
+R Shoulder Abduction against wall (bent arm)	XGEN430
+L Shoulder Abduction against wall (bent arm)	XGEN430
+R Shoulder Adduction against body/wall	XGEN1552
+L Shoulder Adduction against body/wall	XGEN1552
+R Shoulder External rotation at 0 against wall	GEN16231
+L Shoulder External rotation at 0 against wall	GEN16231
+R Shoulder Internal rotation at 0 against wall	XGEN428
+L Shoulder Internal rotation at 0 against wall	XGEN428
+TB R Shoulder Flexion (180)	GEN17881
+TB L Shoulder Flexion (180)	GEN17881
+TB R Shoulder Flexion (90)	XGEN2165
+TB L Shoulder Flexion (90)	XGEN2165
+TB R Shoulder Extension	XGEN1501
+TB L Shoulder Extension	XGEN1501
+TB R Shoulder Abduction (180)	GEN101762
+TB L Shoulder Abduction (180)	GEN101762
+TB R Shoulder Abduction (90)	XGEN2152
+TB L Shoulder Abduction (90)	XGEN2152
+Bridging with resisted abduction	XGEN254
+TB R Shoulder Adduction	GEN101495
+TB L Shoulder Adduction	GEN101495
+TB R Shoulder External rotation at 0	XGEN123
+TB L Shoulder External rotation at 0	XGEN123
+TB R Shoulder Internal rotation at 0	XGEN1545
+TB L Shoulder Internal rotation at 0	XGEN1545
+TB R Shoulder External rotation at 45	GEN225948
+TB L Shoulder External rotation at 45	GEN225948
+TB R Shoulder Internal rotation at 45	XGEN1708
+TB L Shoulder Internal rotation at 45	XGEN1708
+TB R Shoulder External rotation at 90	XGEN1707
+TB L Shoulder External rotation at 90	XGEN1707
+TB R Shoulder Internal rotation at 90	GEN16406
+TB L Shoulder Internal rotation at 90	GEN16406
+TB Scapular retraction (Horizontal abduction)- bilateral	GEN217893
+TB L Scapular retraction (Horizontal abduction)	GEN198422
+TB R Shoulder Horizontal adduction 	GEN11970
+TB L Shoulder Horizontal adduction 	GEN11970
+TB L PNF	XGEN133
+TB R PNF	XGEN133
+TB Serratus punch bilateral 	GEN196471
+TB R Serratus punch	GEN41427
+TB Bilateral Rows (Bent elbow)	XGEN1505
+TB L Rows (Bent elbow)	GEN316267
+TB  Low rows (Straight elbow)	GEN120907
+TB L Low rows (Straight elbow)	GEN120907
+TB R Shoulder flexion (scaption plane)	GEN2543
+TB L Shoulder flexion (scaption plane)	GEN2543
+DB R Flexion (180, straight arm) standing	GEN23555
+DB L Flexion (180, straight arm) standing	GEN23555
+DB R Flexion (90, straight arm) standing	GEN101499
+DB L Flexion (90, straight arm) standing	GEN101499
+DB R Flexion (90, straight arm) crook lying	GEN624164
+DB L Flexion (90, straight arm) crook lying	GEN624164
+DB R Extension prone	GEN87075
+DB L Extension prone	GEN87075
+DB R Abduction (180, straight arm) standing	GEN23535
+DB L Abduction (180, straight arm) standing	GEN23535
+DB R Abduction (90, straight arm) standing	GEN102173
+DB L Abduction (90, straight arm) standing	GEN102173
+DB R Abduction (90, straight arm) side lying	XGEN2134
+DB L Abduction (90, straight arm) side lying	XGEN2134
+DB R Abduction (90, bent arm) standing	GEN15453
+DB L Abduction (90, bent arm) standing	GEN15453
+DB W standing	GEN435956
+DB I prone	GEN95303
+DB Y prone	GEN191683
+DB  T prone	GEN211860
+DB  W prone	GEN191687
+DB R Shoulder press at 90 abduction standing	GEN314478
+DB L Shoulder press at 90 abduction standing	GEN314478
+DB R Chest press at 0 abduction	GEN286088
+DB L Chest press at 0 abduction	GEN286088
+DB R Chest press at 90 abduction	XGEN1547
+DB L Chest press at 90 abduction	XGEN1547
+DB R Serratus punch	GEN41427
+DB L Serratus punch	GEN41427

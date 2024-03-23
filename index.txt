@@ -1,0 +1,13 @@
+.
+./train.jsonl
+./finalHEP.txt
+./HEP4.html
+./finalHEP2n.txt
+./index.html
+./test.js
+./code_blocks.html
+./copy_chat2.js
+./finalHEP2.txt
+./documents.html
+./snake.html
+./node_modules

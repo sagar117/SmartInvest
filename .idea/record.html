@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Capture</title>
+</head>
+<body>
+    <h1>DOM Capture Example</h1>
+    <button id="captureButton">Start Capture</button>
+    <button id="stopButton">Stop Capture</button>
+    <div id="capturedContent"></div>
+
+    <script>
+        let capturing = false;
+        let capturedContent = [];
+
+        document.getElementById('captureButton').addEventListener('click', startCapture);
+        document.getElementById('stopButton').addEventListener('click', stopCapture);
+
+        function startCapture() {
+            capturing = true;
+            capturedContent = [];
+
+            // Record initial state of the DOM
+            captureDOMState();
+
+            // Start listening for user interactions
+            document.addEventListener('click', recordClick);
+            document.addEventListener('mousemove', recordMouseMove);
+            document.addEventListener('keydown', recordKeyPress);
+        }
+
+        function stopCapture() {
+            capturing = false;
+
+            // Stop listening for user interactions
+            document.removeEventListener('click', recordClick);
+            document.removeEventListener('mousemove', recordMouseMove);
+            document.removeEventListener('keydown', recordKeyPress);
+
+            // Output captured content
+            console.log(capturedContent);
+            renderCapturedContent();
+        }
+
+        function captureDOMState() {
+            // Capture initial state of the DOM
+            capturedContent.push({
+                timestamp: Date.now(),
+                html: document.documentElement.outerHTML
+            });
+        }
+
+        function recordClick(event) {
+            if (capturing) {
+                capturedContent.push({
+                    timestamp: Date.now(),
+                    type: 'click',
+                    target: event.target.outerHTML
+                });
+            }
+        }
+
+        function recordMouseMove(event) {
+            if (capturing) {
+                capturedContent.push({
+                    timestamp: Date.now(),
+                    type: 'mousemove',
+                    x: event.clientX,
+                    y: event.clientY
+                });
+            }
+        }
+
+        function recordKeyPress(event) {
+            if (capturing) {
+                capturedContent.push({
+                    timestamp: Date.now(),
+                    type: 'keydown',
+                    key: event.key
+                });
+            }
+        }
+
+        function renderCapturedContent() {
+            const capturedContentDiv = document.getElementById('capturedContent');
+            capturedContentDiv.innerHTML = '';
+
+            capturedContent.forEach(item => {
+                const div = document.createElement('div');
+                div.textContent = JSON.stringify(item);
+                capturedContentDiv.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>

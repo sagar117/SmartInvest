@@ -1,0 +1,250 @@
+Cervical lateral flexion at the wall with ball Right	GEN295265
+L Hamstring stretch	GEN101504
+R Hamstring stretch	GEN101504
+Hamstring stretch	GEN101504
+Swiss ball rotation	GEN42037
+Lat stretch Left	GEN104062
+Lat stretch Right	GEN104062
+Sciatic nerve glide on stability ball Left	GEN411208
+Sciatic nerve glide on stability ball Right	GEN411208
+Shoulder Mobilization Swiss Ball Circles Left	GEN299355
+Shoulder Mobilization Swiss Ball Circles Right	GEN299355
+ATY on table	XGEN1677
+ATY on table	GEN295441
+ATY on table	GEN295441
+ATY on ball	GEN112745
+R Wall ball stabilization circles/ABCs	XGEN2127
+L Wall ball stabilization circles/ABCs	XGEN2127
+Bilateral external rotation	XGEN74
+Face pulls	GEN297787
+Shoulder wall isometrics in all planes (R Isometric Shoulder Horizontal Abduction at Wall)	XGEN1549
+Shoulder wall isometrics in all planes (L Isometric Shoulder Horizontal Abduction at Wall)	XGEN1549
+Isometric Left Shoulder internal rotation against wall	XGEN428
+R Supine Serratus ABCs	XGEN2128
+L Supine Serratus ABCs	XGEN2128
+Prone swimmers	GEN282146
+Table slide stretch flexion/ER	GEN44483
+Table slide stretch flexion/ER	GEN44483
+Rhomboid stretch	GEN23157
+R Prone 90/90 eccentric external ball toss	GEN192995
+L Prone 90/90 eccentric external ball toss	GEN192995
+Prone 90/90 ER AROM	XGEN60
+R Pronation supination with a hammer	GEN89900
+L Pronation supination with a hammer	GEN89900
+Ball bridge with hamstring curl	GEN41518
+Press-up with knee flexion from hands	GEN109560
+Press-up with knee flexion from hands	GEN109560
+L Mermaid	PTE31732
+R Mermaid	PTE31732
+Quick arms movement with band ( R half-kneeling)	GEN285032
+Quick arms movement with band ( L half-kneeling)	GEN285032
+R Forward lunge with trunk rotation	REN8919
+L Forward lunge with trunk rotation	REN8919
+R Wood chops	GEN13062
+L Wood chops	GEN13062
+R Wood chops	REN100665
+L  Wood chops	REN100665
+R Wood chops	GEN12710
+L Wood chops	GEN12710
+R Wood chops	REN101226
+L Wood chops	REN101226
+R Reverse wood chops	GEN13066
+L Reverse wood chops	GEN13066
+Hip hinge side bridge Right	GEN285343
+Side plank on knee Right	PRE104527
+(r)Side plank knee + abd. 	GEN41425
+(R)Side plank, hip abduction 	REN13867
+(r)Side plank SLR	GEN116609
+(r)Side plank ABD with ER	GEN278065
+(r)Side bridge+hip abduction	GEN41419
+(r)Side plank (up and down)	REN19302
+(r)Side plank (up and down)	REN42976
+Side bridge with hip abduction	GEN41520
+(r)Side plank horizontal abduction ball toss	GEN96812
+(r)Side plank external rotation ball toss	GEN96810
+Shoulder external rotation in (r)side plank	GEN191679
+(r) Side plank with row	REN192851
+Modified side plank with pelvis rotation	GEN302990
+Side bridge roll	GEN101428
+Advanced side bridge roll	GEN101429
+Mod. side plank leg circles	GEN116608
+Mod. side plank arm circles	GEN116606
+Side plank arm circles	GEN116612
+Side plank leg circles	GEN116611
+Side plank arm and leg circles	GEN116613
+Side plank with side switch	XGEN2157
+Long lever adductor bridge	GEN279756
+Short lever adductor bridge	GEN279755
+Plank with posterior tilt	GEN197633
+Plank on table/counter	GEN288309
+Star plank	REN280081
+Plank, feet elevated	PED606741
+RKC Plank	REN309931
+Hip hinge side bridge	GEN285343
+Side plank on knee	PRE104527
+Side plank knee + abd.	GEN41425
+Side plank, hip abduction	REN13867
+Side plank SLR	GEN116609
+Side plank ABD with ER	GEN278065
+Side bridge+hip abduction	GEN41419
+Side plank (up and down)	REN19302
+Side plank (up and down)	REN42976
+Side bridge with hip abduction	GEN41520
+Side plank horizontal abduction ball toss	GEN96812
+Side plank external rotation ball toss	GEN96810
+Shoulder external rotation in side plank	GEN191679
+Side plank with row	REN192851
+Modified side plank with pelvis rotation	GEN302990
+Side bridge roll	GEN101428
+Mod. side plank leg circles	GEN116608
+Mod. side plank arm circles	GEN116606
+Side plank arm circles	GEN116612
+Side plank leg circles	GEN116611
+Side plank arm and leg circles	GEN116613
+Side plank with side switch	XGEN2157
+Long lever adductor bridge	GEN279756
+Short lever adductor bridge	GEN279755
+Side Plank with Clam	GEN216593
+Side Plank with Clam and Resistance	GEN196495
+Primal Push Up	GEN117815
+Mountain Climber on Counter	GEN525301
+Rotation side plank Right	XGEN1685
+Rotation side plank Left	XGEN1685
+Plank with bent knee hip ext.	GEN119954
+Plank with bent knee hip ext.	GEN119954
+Single arm on peanut ball Right	GEN41526
+Single arm on peanut ball Left	GEN41526
+Abdominals on hands and toes Right	GEN212828
+Abdominals on hands and toes Left	GEN212828
+Reverse plank bridge	GEN292591
+Reverse plank bridge	GEN292591
+Forward reach	GEN198407
+Forward reach	GEN198407
+Side reach	GEN198406
+Side reach	GEN198406
+Diagonal reach	GEN198408
+Diagonal reach	GEN198408
+Hand side walk, kneeling	GEN198413
+Hand side walk, kneeling	GEN198413
+Side plank feet elevated	XGEN2182
+Side plank feet elevated	XGEN2182
+Plank on Step	GEN191705
+Pushup to Side Plank and Extension	GEN198334
+Pushup to Side Plank and Extension	GEN198334
+Plank, hip flexion	GEN24082
+Plank, hip flexion	GEN24082
+Single arm iso push-up	GEN97201
+Single arm iso push-up	GEN97201
+Plank with arm lift	GEN116792
+Plank with arm lift	GEN116792
+Modified plank with leg lift	GEN227365
+Modified plank with leg lift	GEN227365
+Plank with hip extension right	XGEN2187
+Plank with hip extension left	XGEN2187
+Side plank on the wall right	GEN112877
+Side plank on the wall left	GEN112877
+Modified dips on chair	GEN278052
+Superman	GEN39332
+Superman	GEN39332
+Superman arms forward (110 °)	GEN216600
+Superman arms forward (110 °)	GEN216600
+Superman arms forward (130 °)	GEN216601
+Superman arms forward (130 °)	GEN216601
+Single arm iso push-up	GEN97198
+Single arm iso push-up	GEN97198
+Reverse press	GEN295439
+Full Plank with Hip Flexion/Adduction Knee Drive at Wall	GEN24082
+Modified Plank	XGEN1526
+Full Plank Walk Outs with Band Around Wrist	GEN198419
+Push-up with band	GEN198414
+Push-up knees (increased ROM)	GEN114592
+Fist push-ups	GEN111740
+Fist push-ups feet on a box	GEN112127
+Spiderman	GEN212807
+Primal Push Up with Shoulder Taps	GEN117814
+Primal Push Up with Shoulder Taps	GEN117814
+Full Plank with Shoulder Tap	GEN285035
+Full Plank with Shoulder Tap	GEN285035
+Tricep Push Up	XGEN1525
+Wall Push Up with Plus	GEN100641
+Wall Push Up with Arms Wide	XGEN2124
+Push Up with Arms Wide	XGEN1525
+Push Up on BOSU® Ball	GEN2479
+Plyometric Serratus Pushups On BOSU® Flat Side Up	GEN2479
+Modified Push Up on Floor With Transverse Abdominis and Pelvic Floor Contraction	XGEN210
+Isometric Low Push Up	GEN97210
+Tricep Push Up on Wall	XGEN1532
+Modified side plank + clam	GEN196495
+Modified side plank + clam	GEN196495
+Staggered push-up	GEN198415
+Staggered push-up	GEN198415
+Supine Bridge with Pelvic Floor Contraction	GEN8159
+Left Single Leg Bridge	GEN41437
+Right Single Leg Bridge	GEN41437
+Right Supine Bridge with Knee to Chest	GEN278345
+Left Supine Bridge with Knee to Chest	GEN278345
+Supine Bridge with Mini Swiss Ball Between Knees	XGEN1679
+Right Single Leg Bridge with Leg Supported	GEN315050
+Left Single Leg Bridge with Leg Supported	GEN315050
+Bridge Walk Out	GEN225908
+Frog bridge	GEN302994
+Assisted single-leg glute bridge	XGEN253
+Assisted single-leg glute bridge	XGEN253
+Brugger bridge	GEN196518
+Left Glute bridge w/ circumduction	GEN2473
+Right Glute bridge w/ circumduction	GEN2473
+Glute bridge w/ pelvis drop	GEN42124
+Glute bridge w/ pelvis drop	GEN42124
+Glute bridge w/ spine curl	GEN44186
+Supine Bridge with Spinal Articulation	GEN44186
+Glute bridge, forefoot + heel	GEN196435
+Left Glute bridge w/ knee ext. (A)	GEN117031
+Right Glute bridge w/ knee ext. (A)	GEN117031
+Bridge PNF, shoulder flexion	GEN12997
+Bridge PNF, shoulder flexion	GEN105926
+Glute bridge walkout	GEN197406
+Left Eccentric glute bridge	GEN197406
+Right Eccentric glute bridge	GEN105930
+Left Glute bridge with tennis ball	GEN105930
+Right Glute bridge with tennis ball	GEN105930
+Bridge on BOSU	GEN285048
+Right Dragon	GEN101418
+Left Dragon	GEN101418
+Pushouts	GEN196406
+Seated Modified Small Range Crunch in Chair	GEN299370
+Reverse Crunch from 90/90 with Mini Swiss Ball Between Knees	GEN42036
+Supine Oblique Crunch with Ball Between Knees	GEN376564
+Supine Oblique Crunch with Ball Between Knees	GEN376564
+Neutral Curl Up with Straight leg	GEN44924
+Neutral Curl Up with Straight leg	GEN44924
+Seated Transversus Abdominis Bracing	GEN42183
+Warrior I	GEN106804
+Warrior I	GEN106804
+Warrior II	GEN106805
+Warrior II	GEN106805
+Supine 90/90 One Arm Fly	GEN91211
+Supine 90/90 One Arm Fly	GEN91211
+Frog crunch	GEN13029
+Crunch with towel assist	GEN227338
+Towel abdominal curl	GEN41094
+Trunk flexion	GEN120241
+Advanced curl up	GEN101427
+Advanced curl up	GEN101427
+Beginner curl-up	GEN44871
+Beginner curl-up	GEN44871
+Partial crunches with ball squeeze	GEN376563
+Upper trunk sit-up (legs and arms straight)	GEN13755
+Upper trunk sit-up (legs straight, crossed arm)	GEN13749
+Upper trunk sit-up (legs straight, hands behind head)	GEN13757
+Bracing with rotation	XGEN2158
+Bracing with rotation	XGEN2158
+Standing side crunch	GEN279772
+Standing side crunch	GEN279772
+Hollow hold (holding legs)	GEN297772
+Hollow hold	GEN227372
+Hollow hold (1 leg straight)	GEN297773
+Hollow hold (1 leg straight)	GEN297773
+Hollow hold (legs straight, arms up)	GEN297774
+Hollow hold (legs straight, arms up)	GEN297774
+Hollow hold (legs straight, arms behind)	GEN297775
+Hollow hold (legs straight, arms behind)	GEN297775

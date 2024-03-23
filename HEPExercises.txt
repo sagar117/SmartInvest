@@ -1,0 +1,31 @@
+Feature Name: HEP Exercises
+Objective/Purpose: Update the list of exercises in a specific format.
+
+User Interface (UI) Requirements:
+- None
+
+Functionality:
+- Update the list of exercises by adding new exercises in a predefined format.
+- The list should include the name, code, and difficulty level for each exercise.
+
+Data Requirements:
+- Exercise name (string).
+- Exercise code (string).
+- Difficulty level (string).
+
+Dependencies:
+- None
+
+Platform/Technology:
+- Any programming language or platform can be used.
+
+Constraints/Limitations:
+- The exercise list format should strictly follow the provided format.
+
+Expected Output/Result:
+- Updated list of exercises in the specified format.
+
+Sample Output:
+[{name: "Exercise 1", code: "E001", difficulty: "Low"},
+ {name: "Exercise 2", code: "E002", difficulty: "Medium"},
+ {name: "Exercise 3", code: "E003", difficulty: "High"}]

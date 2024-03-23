@@ -1,0 +1,30 @@
+Feature Name: HEP Exercises
+
+Objective/Purpose: To rank exercises according to their difficulty level in a Home Exercise Program (HEP).
+
+User Interface (UI) Requirements: An easy-to-use and visually appealing interface that allows users to access and interact with the exercise list.
+
+Functionality: 
+1. Users should be able to view a list of exercises in the HEP.
+2. Users should be able to rank exercises based on their perceived difficulty level.
+3. The system should calculate and display the average difficulty level of each exercise based on user rankings.
+4. Users should have the ability to add or remove exercises from the HEP.
+
+Data Requirements: 
+1. List of exercises with their corresponding difficulty levels.
+2. User rankings for each exercise.
+
+Dependencies: 
+1. The availability and accuracy of exercise data.
+2. Proper user input for ranking exercises.
+
+Platform/Technology: The application can be developed as a mobile app or a web-based application using technologies such as HTML/CSS, JavaScript, and a backend framework like Node.js.
+
+Constraints/Limitations: 
+1. The accuracy of difficulty level rankings will depend on user perception, which can vary.
+2. The exercise list and difficulty level rankings may need to be regularly updated and reviewed by healthcare professionals.
+
+Expected Output/Result: 
+1. A list of exercises ranked according to their difficulty level, based on user input.
+2. Average difficulty level calculation displayed for each exercise.
+3. The ability for users to personalize their HEP by adding or removing exercises.
