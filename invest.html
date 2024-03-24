@@ -68,16 +68,40 @@
       margin-bottom: 20px;
       color: #333;
     }
+    /* Loader styles */
+    .loader {
+      border: 6px solid #f3f3f3; /* Light grey */
+      border-top: 6px solid #3498db; /* Blue */
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Hide loader initially */
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Financial Analysis | Your Personal Investment Guide</h1>
     <div class="input-field">
-      <label for "query">Enter your investment query:</label>
+      <label for="query">Enter your investment query:</label>
       <input type="text" id="query" class="input-box" placeholder="Search for stocks">
     </div>
     <button onclick="submitQuery()" class="submit-btn">Submit</button>
+
+    <!-- Loader -->
+    <div id="loader" class="loader hidden"></div>
 
     <div id="output-container" class="output">
       <h2>Result:</h2>
@@ -90,19 +114,31 @@
     async function submitQuery() {
       const query = document.getElementById('query').value;
       const responseContainer = document.getElementById('response');
+      const loader = document.getElementById('loader');
 
-      const response = await fetch('/api/investment-guide', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ query })
-      });
+      // Display loader
+      loader.classList.remove('hidden');
 
-      const result = await response.text();
-      console.log("Aa gaya" + result.response);
+      try {
+        const response = await fetch('/api/investment-guide', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ query })
+        });
 
-      responseContainer.innerHTML = result;
+        const result = await response.text();
+        console.log("Aa gaya" + result.response);
+
+        responseContainer.innerHTML = result;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        responseContainer.innerHTML = 'Error fetching data. Please try again later.';
+      } finally {
+        // Hide loader
+        loader.classList.add('hidden');
+      }
     }
   </script>
 </body>
