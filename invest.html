@@ -129,9 +129,13 @@
         });
 
         const result = await response.text();
-        console.log("Aa gaya" + result.response);
+        const jsonObject = JSON.parse(result);
 
-        responseContainer.innerHTML = result;
+        const responseValue = jsonObject.response;
+        console.log(responseValue);
+
+
+        responseContainer.innerHTML = responseValue;
       } catch (error) {
         console.error('Error fetching data:', error);
         responseContainer.innerHTML = 'Error fetching data. Please try again later.';
