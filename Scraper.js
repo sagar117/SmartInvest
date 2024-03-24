@@ -40,13 +40,29 @@ async function scrapeFinancialData(stockSymbol) {
   }
 }
 
+// List of user agents
+const userAgents = [
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0",
+  // Add more user agents as needed
+];
+
+// Function to select a random user agent
+function getRandomUserAgent() {
+  const randomIndex = Math.floor(Math.random() * userAgents.length);
+  return userAgents[randomIndex];
+}
+const randomUserAgent = getRandomUserAgent();
+console.log(randomUserAgent);
+
 // Function to get the first Google search link
 async function getFirstGoogleSearchLink(query) {
   try {
     const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
     const response = await axios.get(searchUrl, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'User-Agent': randomUserAgent,
       },
     });
 
@@ -71,21 +87,7 @@ async function getFirstGoogleSearchLink(query) {
 }
 
 
-// List of user agents
-const userAgents = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:97.0) Gecko/20100101 Firefox/97.0",
-    // Add more user agents as needed
-];
 
-// Function to select a random user agent
-function getRandomUserAgent() {
-    const randomIndex = Math.floor(Math.random() * userAgents.length);
-    return userAgents[randomIndex];
-}
-const randomUserAgent = getRandomUserAgent();
-console.log(randomUserAgent);
 
 // Function to scrape financial data from a specific URL
 async function scrapeFinancialDataFromURL(url) {
